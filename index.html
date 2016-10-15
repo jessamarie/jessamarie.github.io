@@ -17,9 +17,13 @@
         <link rel="stylesheet" href="assets/css/animate.css">
     </head>
     <body data-ng-controller="IndexController as IC">
-        <div class="container">
-            <nav data-ui-view="menu" role="navigation"></nav>
-        </div>
+      <div class="container">
+          <header data-ui-view="header"></header>
+          <nav data-ui-view="menu" role="navigation"></nav>
+          <section data-ui-view="breadcrumbs"></section>
+          <section data-ui-view="content"></section>
+          <footer data-ui-view="footer"></footer>
+</div>
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
