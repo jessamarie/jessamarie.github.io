@@ -3,6 +3,7 @@
 
     angular.module('app', [
         'ui.router',
+        'app.index'
         'app.nav.menu',
         'app.home',
         'app.projects',
