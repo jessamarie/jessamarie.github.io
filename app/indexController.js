@@ -1,31 +1,15 @@
 (function () {
     'use strict';
 
-    angular.module('app.index', ['app.todosService'])
+    angular.module('app.index', [])
 
-            .controller('IndexController', IndexController);
+            .controller('indexController', indexController);
 
-    IndexController.$inject = ['$log', 'todosService'];
+    indexController.$inject = ['$log', '$scope'];
 
-    function IndexController($log, todosService) {
+    function indexController($log, $scope) {
         var vm = this;
 
-        vm.todos = [];
-
-        retrieve();
-
-        function retrieve() {
-            return getTodos().then(function () {
-                $log.info('Retrieved Todos');
-            });
-        }
-
-        function getTodos() {
-            return todosService.getTodos()
-                    .then(function (data) {
-                        vm.todos = data;
-                        return vm.todos;
-                    });
-        }
-    }
+        $scope.message = 'Hello, World. This is Jessica. This site is currently in the design stage, so check back in a month, or two! Peace :) ';
+      }
 })();

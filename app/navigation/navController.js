@@ -5,9 +5,9 @@
 
             .controller('navController', navController);
 
-    MenuController.$inject = ['$state'];
+    navController.$inject = ['$state'];
 
-    function MenuController($state) {
+    function navController($state) {
 
     }
 })();

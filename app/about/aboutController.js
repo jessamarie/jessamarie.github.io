@@ -5,10 +5,12 @@
 
             .controller('aboutController', aboutController);
 
-    aboutController.$inject = ['$stateParams', '$state'];
+    aboutController.$inject = ['$stateParams', '$state', '$scope'];
 
-    function aboutController($stateParams, $state) {
+    function aboutController($stateParams, $state, $scope) {
         var scope = this;
+
+       $scope.message = 'This is my about page';
 
         // add needed variables here!
 
