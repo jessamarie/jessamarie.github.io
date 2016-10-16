@@ -1,0 +1,5 @@
+[alias]
+    stp = subtree push
+    stpp = subtree push --prefix
+    gcm = git commit -m
+    gcam = git commit -am
