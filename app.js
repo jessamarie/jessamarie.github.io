@@ -4,7 +4,7 @@
     angular.module('app', [
         'ui.router',
         'app.index'
-        'app.nav.menu',
+        'app.nav',
         'app.home',
         'app.projects',
         'app.about',

@@ -5,7 +5,7 @@
 describe("MenuController", function () {
     var scope, state, controller, vm;
 
-    beforeEach(module("app.nav.menu"));
+    beforeEach(module("app.nav"));
 
     beforeEach(inject(function ($controller, $rootScope, $state) {
         state = $state;
