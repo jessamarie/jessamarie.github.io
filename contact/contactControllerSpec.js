@@ -5,7 +5,7 @@
 describe("contactController", function () {
     var stateParams, state, controller, scope;
 
-    beforeEach(module("app.about"));
+    beforeEach(module("app.contact"));
 
     beforeEach(inject(function ($controller, $state) {
         state = $state;

@@ -5,7 +5,7 @@
 
             .controller('projectsController', projectsController);
 
-    navController.$inject = ['$stateParams', '$state', '$scope'];
+    projectsController.$inject = ['$stateParams', '$state', '$scope'];
 
     function projectsController($stateParams, $state, $scope) {
         var scope = this;

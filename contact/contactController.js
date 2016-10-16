@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app.about', ['ui.router'])
+    angular.module('app.contact', ['ui.router'])
 
             .controller('contactController', contactController);
 
