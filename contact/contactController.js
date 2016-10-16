@@ -3,14 +3,15 @@
 
     angular.module('app.about', ['ui.router'])
 
-            .controller('contractController', contractController);
+            .controller('contactController', contactController);
 
-    contractController.$inject = ['$stateParams', '$state'];
+    contactController.$inject = ['$stateParams', '$state'];
 
-    function ContractController($stateParams, $state) {
+    function contactController($stateParams, $state, $scope) {
         var scope = this;
 
         // add needed variables here!
+        $scope.message = 'This is my contact page';
 
         function doSomething() {
           // here as a reminder of how to do this!
