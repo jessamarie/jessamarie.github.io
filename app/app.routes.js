@@ -3,35 +3,45 @@
 
     angular.module('app')
 
-            .config(config);
+          .config(config);
 
-    config.$inject = ['$stateProvider', '$urlRouterProvider', '$routeProvider'];
+    config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-    function config($stateProvider, $urlRouterProvider, $routeProvider) {
-         $routeProvider
+    function config($stateProvider, $urlRouterProvider) {
+      $urlRouterProvider.otherwise("/");
+      $stateProvider
+        // route for the home page
+        .state('home', {
+          url: "/",
+          template: 'home/home.html',
+          controller: 'indexController',
+          controllerAs: 'index',
+          data:{}
+         })
+         // route for the about page
+        .state('about', {
+          url: "/about",
+           template: 'about/about.html',
+           controller: 'aboutController',
+           controllerAs: 'about',
+           data:{}
+         })
+        // route for the projects page
+        .state('projects', {
+          url: "/projects",
+           template: 'projects/projects.html',
+           controller: 'projectsController',
+           controllerAs: 'projects',
+           data:{}
+         })
+         // route for the contact page
+         .state('contact', {
+           url: "/contact",
+            template: 'contact/contact.html',
+            controller: 'contactController',
+            controllerAs: 'contact',
+            data:{}
+          });
 
-             // route for the home page
-             .when('/', {
-                 templateUrl : 'home/home.html',
-                 controller  : 'indexController'
-             })
-
-             // route for the about page
-             .when('/about', {
-                 templateUrl : 'about/about.html',
-                 controller  : 'aboutController'
-             })
-
-             // route for the projects page
-             .when('/projects', {
-                 templateUrl : 'projects/projects.html',
-                 controller  : 'projectsController'
-             })
-
-             // route for the contact page
-             .when('/contact', {
-                 templateUrl : 'contact/contact.html',
-                 controller  : 'contactController'
-             });
-           }
+        }
 })();
