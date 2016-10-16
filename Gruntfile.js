@@ -42,8 +42,8 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: [
-                    'app/core/app.js',
-                    'app/core/app.routes.js',
+                    'app/app.js',
+                    'app/app.routes.js',
                     'app/**/*.js',
                     '!app/bower_components/**/*.js',
                     '!app/**/*Spec.js'
@@ -58,8 +58,8 @@ module.exports = function (grunt) {
             },
             build: {
                 src: [
-                    'app/core/app.js',
-                    'app/core/app.routes.js',
+                    'app/app.js',
+                    'app/app.routes.js',
                     'app/**/*.js',
                     '!app/bower_components/**/*.js',
                     '!app/**/*Spec.js'

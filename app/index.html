@@ -13,17 +13,15 @@
         <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="assets/css/animate.css">
+      <!--  <link rel="stylesheet" href="assets/css/main.css"> -->
+      <!--  <link rel="stylesheet" href="assets/css/animate.css"> -->
     </head>
-    <body data-ng-controller="IndexController as IC">
+    <body data-ng-controller="indexController as index">
+
       <div class="container">
-          <header data-ui-view="header"></header>
           <nav data-ui-view="menu" role="navigation"></nav>
-          <section data-ui-view="breadcrumbs"></section>
-          <section data-ui-view="content"></section>
-          <footer data-ui-view="footer"></footer>
-</div>
+          <section data-ui-view="home"></section>
+     </div>
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -50,7 +48,6 @@
         <script src="projects/projectsController.js"></script>
         <script src="contact/contactController.js"></script>
 
-        <p>Hello, World. This is Jessica. This site is currently in the design
-        stage, so check back in a month, or two! Peace :) </p>
+                <p> {{ message }} </p>
     </body>
 </html>
