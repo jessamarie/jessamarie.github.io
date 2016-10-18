@@ -10,6 +10,20 @@
     function config($stateProvider, $urlRouterProvider) {
       $urlRouterProvider.otherwise("/");
       $stateProvider
+        .state('root', {
+          abstract: true,
+          url: '/',
+          data: {
+            title: 'Home'
+          },
+          views: {
+            'navigation': {
+              templateUrl: 'navigation/navigation.html',
+              controller: 'navController',
+              controllerAs: 'nav'
+            }
+          }
+        })
         // route for the home page
         .state('home', {
           url: "/",
