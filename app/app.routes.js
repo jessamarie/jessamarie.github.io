@@ -8,28 +8,14 @@
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function config($stateProvider, $urlRouterProvider) {
-      $urlRouterProvider.otherwise("/");
+      $urlRouterProvider.otherwise("/home");
       $stateProvider
-        .state('root', {
-          abstract: true,
-          url: '/',
-          data: {
-            title: 'Home'
-          },
-          views: {
-            'navigation': {
-              templateUrl: 'navigation/navigation.html',
-              controller: 'navController',
-              controllerAs: 'nav'
-            }
-          }
-        })
         // route for the home page
         .state('home', {
           url: "/",
           template: 'home/home.html',
-          controller: 'indexController',
-          controllerAs: 'index',
+          controller: 'mainController',
+          controllerAs: 'main',
           data:{}
          })
          // route for the about page

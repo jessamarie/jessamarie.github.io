@@ -3,11 +3,12 @@
 
     angular.module('app', [
         'ui.router',
-        'app.index',
+        'app.main',
         'app.nav',
+        'app.nav.directive',
         'app.home',
         'app.projects',
         'app.about',
-        'app.contact'
+        'app.contact'      
     ]);
 })();

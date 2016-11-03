@@ -1,34 +1,20 @@
 (function () {
     'use strict';
 
-    angular.module('app.nav', ['ui.router'])
+    angular.module('app.nav', [])
 
             .controller('navController', navController);
 
-    navController.$inject = ['$state', '$scope'];
+    navController.$inject = ['$scope'];
 
-//Probably don't need state but keep it for now
-    function navController($state, $scope) {
+    function navController($scope) {
 
       $scope.state = false;
+      //$scope.isCollapsed = true;
 
-      var vm = this;
-
-      vm.getClass = getClass;
-
-
-      // probably related to page's path
-      function getClass(path) {
-          if ($state.current.name.substr(0, path.length) === path) {
-              return 'active';
-          } else {
-              return '';
-          }
-      }
-
-      function toggleState() {
-        $scope.state = !$scope.state;
-      }
+      $scope.toggleState = function() {
+          $scope.state = !$scope.state;
+      };
 
     }
 
