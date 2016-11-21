@@ -1,0 +1,19 @@
+<!--  Code licensed under the MIT License. Adapted from: https://material.angularjs.org/latest/demo/sidenav -->
+
+<div ng-controller="menuController">
+
+    <md-list>
+    <md-item ng-repeat="item in menu">
+      <a>
+        <md-item-content md-ink-ripple layout="row" layout-align="start center">
+          <div class="inset">
+            <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+          </div>
+          <div class="inset">{{item.title}}
+          </div>
+        </md-item-content>
+      </a>
+    </md-item>
+  </md-list>
+
+</div>

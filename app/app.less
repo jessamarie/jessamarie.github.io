@@ -1,32 +1,19 @@
-@import 'navigation/navigation.less';
-
 /* Variables */
 
-@body-bg-color: #83b692; // green
-@text-color: #fff; // white
-@button-bg-color: #f9627d; // pink
+@body-bg-color: #F2D8A7; //tan
+@text-color: #73503C; // brown
+@toolbar-color: #591E23; //deep pink red
+@button-bg-color: #D94E67; // pink
+@component-color: #A68572; // light brown
+
+@import 'navigation/navigation.less';
+//@import 'navigation/top/top.less';
+//@import 'navigation/menu/menu.less';
 
 /* LESS CSS */
-
 body {
 background: @body-bg-color;
 color: @text-color;
 font-family: sans-serif;
 text-align: center;
-}
-
-a:link, a:visited {
-background: @button-bg-color;
-color: @text-color;
-display: inline-block;
-padding: 10px 10px;
-text-decoration: none;
-}
-
-a:hover {
-background-color: desaturate(@button-bg-color, 50%);
-}
-
-a:active {
-background-color: saturate(@button-bg-color, 50%);
 }

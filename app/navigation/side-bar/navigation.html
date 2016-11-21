@@ -1,0 +1,28 @@
+<div data-ng-controller="navController">
+
+    <!-- sidenav content -->
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+
+      <!-- closes the sidenav -->
+      <md-toolbar class="md-hue-2">
+
+        <span flex></span>
+
+        <div layout="row" layout-align="space-between start" style="min-height: 50px" class="md-toolbar-tools-bottom inset">
+          <div>Navigation</div>
+          <span></span>
+          <md-content>
+            <md-button ng-click="toggleInner()" aria-label="Menu">
+              <ng-md-icon icon="menu"></ng-md-icon>
+            </md-button>
+          </md-content>
+        </div>
+
+      </md-toolbar>
+
+      <!-- menu content -->
+      <menu></menu>
+
+    </md-sidenav>
+
+</div>
