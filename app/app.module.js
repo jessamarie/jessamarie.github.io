@@ -1,5 +1,5 @@
 // Styles
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
 
 // 3rd party modules
