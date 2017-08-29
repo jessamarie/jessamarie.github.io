@@ -1,4 +1,9 @@
 export function
-Header () {
-
+header () {
+  return {
+    templateUrl: 'app/header/header.html',
+    restrict: 'E',
+    controller: 'HeaderController',
+    controllerAs: 'vm'
+  }
 }

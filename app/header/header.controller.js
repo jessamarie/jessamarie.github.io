@@ -1,3 +1,4 @@
-export function HeaderController () {
-  vm.message = 'this is a header'
+export function HeaderController (NavLink) {
+  const vm = this
+  vm.links = NavLink.all()
 }
