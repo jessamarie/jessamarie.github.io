@@ -54121,6 +54121,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_header_module__ = __webpack_require__(18);
 // Styles
 
 
@@ -54130,11 +54131,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // Modules
 
 
+
 __WEBPACK_IMPORTED_MODULE_1_angular___default.a.module('app', [
   // dependencies
   'ui.router',
   // custom
-  __WEBPACK_IMPORTED_MODULE_2__home_home_module__["a" /* default */]
+  __WEBPACK_IMPORTED_MODULE_2__home_home_module__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_3__header_header_module__["a" /* default */]
 ])
 
 
@@ -54776,6 +54779,65 @@ function Router ($stateProvider) {
     url: '',
     templateUrl: 'app/home/home.html'
   })
+}
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__header_controller_js__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_directive_js__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navlink_js__ = __webpack_require__(21);
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a
+    .module('app.header', [])
+    .controller(__WEBPACK_IMPORTED_MODULE_1__header_controller_js__["a" /* HeaderController */])
+    .directive(__WEBPACK_IMPORTED_MODULE_2__header_directive_js__["a" /* Header */])
+    .factory(__WEBPACK_IMPORTED_MODULE_3__navlink_js__["a" /* NavLink */])
+    .name);
+
+
+/***/ }),
+/* 19 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = HeaderController;
+function HeaderController () {
+  vm.message = 'this is a header'
+}
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = Header;
+function
+Header () {
+
+}
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = NavLink;
+function
+NavLink () {
+
 }
 
 
