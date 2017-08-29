@@ -44468,8 +44468,6 @@ module.exports = function (css) {
 
 
 
-// import template from './home.html' // ?
-
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a
     .module('app.home', [__WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs___default.a])
     .config(__WEBPACK_IMPORTED_MODULE_2__home_routes_js__["a" /* Router */])
