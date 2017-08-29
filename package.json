@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server"
+    "start": "webpack --config webpack.config.js",
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,11 @@
     "angular": "^1.6.6"
   },
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.5",
+    "html-webpack-plugin": "^2.30.1",
+    "lite-server": "^2.3.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5"
   }
 }
