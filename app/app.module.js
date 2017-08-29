@@ -1,6 +1,5 @@
 // Styles
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './style.css'
+import './style.less'
 
 // 3rd party modules
 import angular from 'angular'
