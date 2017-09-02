@@ -4,7 +4,7 @@ var webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // cleans unused from dist folder
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-// Extract text from a bundle, or bundles, into a separate file.
+// Extract text from a bundle, or bundles, into a SEPARATE file.
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
@@ -13,11 +13,15 @@ module.exports = {
     vendor: ['angular', '@uirouter/angularjs']
   },
   plugins: [
+    new ExtractTextPlugin({
+      filename: 'style.css',
+      disable: false,
+      allChunks: true
+    }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'index'
     }),
-    new ExtractTextPlugin('styles.css'),
     new webpack.ProvidePlugin({
       'window.jQuery': 'jquery'
     })
@@ -37,13 +41,10 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        use: [{
-          loader: 'style-loader' // creates style nodes from JS strings
-        }, {
-          loader: 'css-loader' // translates CSS into CommonJS
-        }, {
-          loader: 'less-loader' // compiles Less to CSS
-        }]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'less-loader']
+        })
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -52,10 +53,16 @@ module.exports = {
         ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          'file-loader'
-        ]
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            limit: 100000,
+            name: '[name].[ext]',
+            outputPath: 'fonts/',   // where the fonts will go
+            publicPath: './'       // override the default path
+          }
+        }]
       }
     ]
   }
