@@ -1,8 +1,8 @@
-<div class="">
-  <ul class="">
-    <li class="logo"><h1>Jessica Marie</h1></li>
-  	<li ng-repeat="item in vm.links">
-      <a data-ui-sref="item.state">{{item.name}}</a>
-    </li>
+<nav>
+  {{vm.menu}}
+  <ul>
+    	<li ng-repeat="item in header.menu">
+        <a data-ui-sref="item.state">{{item.name}}</a>
+      </li>
   </ul>
-</div>
+</nav>

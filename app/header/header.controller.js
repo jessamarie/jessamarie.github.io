@@ -1,4 +1,5 @@
 export function HeaderController (NavLink) {
   const vm = this
-  vm.links = NavLink.all()
+  console.log(this);
+  vm.menu = NavLink.all()
 }

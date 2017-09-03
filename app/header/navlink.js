@@ -3,18 +3,15 @@ NavLink () {
   const menu = [
     {
       state: 'home',
-      name: 'Home',
-      icon: '' // none yet
+      name: 'Home'
     },
     {
       state: 'skills',
-      name: 'Skills',
-      icon: ''
+      name: 'Skills'
     },
     {
       state: 'projects',
-      name: 'Projects',
-      icon: ''
+      name: 'Projects'
     }
   ]
 

@@ -1,5 +1,5 @@
 // Styles
-import './style.less'
+import './index.less'
 
 // 3rd party modules
 import angular from 'angular'
