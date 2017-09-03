@@ -1,5 +1,9 @@
-<ul class="">
+<ul>
   	<li ng-repeat="item in footer.links">
-      <a href="{{item.link}}"><i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="{{item.link}}"><i ng-class="item.iconClass" aria-hidden="true"></i></a>
+    </li>
+    <li class="copyright"><p> Made with <i class="glyphicon glyphicon-heart-empty"></i>
+        by Jessica Marie, Copyright &copy;<i class="glyphicon glyphicon-copyright-mark"></i>
+        2017</p>
     </li>
 </ul>

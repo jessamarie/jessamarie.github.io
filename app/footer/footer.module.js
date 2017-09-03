@@ -1,5 +1,7 @@
 import angular from 'angular'
 
+import './footer.less'
+
 import { footer } from './footer.directive.js'
 import { FooterLink } from './footerlink.js'
 
