@@ -54110,13 +54110,13 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_less__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__style_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_less__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__index_less__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_module__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_header_module__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__footer_footer_module__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__links_links_module__ = __webpack_require__(24);
 // Styles
 
 
@@ -54134,17 +54134,12 @@ __WEBPACK_IMPORTED_MODULE_1_angular___default.a.module('app', [
   // custom
   __WEBPACK_IMPORTED_MODULE_2__home_home_module__["a" /* default */],
   __WEBPACK_IMPORTED_MODULE_3__header_header_module__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_4__footer_footer_module__["a" /* default */]
+  __WEBPACK_IMPORTED_MODULE_4__links_links_module__["a" /* default */]
 ])
 
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 6 */,
 /* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -54153,7 +54148,11 @@ __WEBPACK_IMPORTED_MODULE_1_angular___default.a.module('app', [
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_routes_js__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_less__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__home_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_routes_js__ = __webpack_require__(8);
+
+
 
 
 
@@ -54161,7 +54160,7 @@ __WEBPACK_IMPORTED_MODULE_1_angular___default.a.module('app', [
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a
     .module('app.home', [__WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs___default.a])
-    .config(__WEBPACK_IMPORTED_MODULE_2__home_routes_js__["a" /* Router */])
+    .config(__WEBPACK_IMPORTED_MODULE_3__home_routes_js__["a" /* Router */])
     .name);
 
 
@@ -54187,7 +54186,8 @@ function Router ($stateProvider) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__header_controller_js__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__header_less__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__header_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__header_less__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_directive_js__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navlink_js__ = __webpack_require__(12);
 
@@ -54196,9 +54196,9 @@ function Router ($stateProvider) {
 
 
 
+
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a
     .module('app.header', [])
-    .controller('HeaderController', __WEBPACK_IMPORTED_MODULE_1__header_controller_js__["a" /* HeaderController */])
     .directive('headerMenu', __WEBPACK_IMPORTED_MODULE_2__header_directive_js__["a" /* header */])
     .factory('NavLink', __WEBPACK_IMPORTED_MODULE_3__navlink_js__["a" /* NavLink */])
     .name);
@@ -54212,7 +54212,7 @@ function Router ($stateProvider) {
 /* harmony export (immutable) */ __webpack_exports__["a"] = HeaderController;
 function HeaderController (NavLink) {
   const vm = this
-  vm.links = NavLink.all()
+  vm.menu = NavLink.all()
 }
 
 
@@ -54222,13 +54222,16 @@ function HeaderController (NavLink) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = header;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__header_controller_js__ = __webpack_require__(10);
+// import template from './header.html'
+
 function
 header () {
   return {
     templateUrl: 'app/header/header.html',
     restrict: 'E',
-    controller: 'HeaderController',
-    controllerAs: 'vm'
+    controller: __WEBPACK_IMPORTED_MODULE_0__header_controller_js__["a" /* HeaderController */],
+    controllerAs: 'header'
   }
 }
 
@@ -54244,18 +54247,15 @@ NavLink () {
   const menu = [
     {
       state: 'home',
-      name: 'Home',
-      icon: '' // none yet
+      name: 'Home'
     },
     {
       state: 'skills',
-      name: 'Skills',
-      icon: ''
+      name: 'Skills'
     },
     {
       state: 'projects',
-      name: 'Projects',
-      icon: ''
+      name: 'Projects'
     }
   ]
 
@@ -54270,15 +54270,43 @@ NavLink () {
 
 
 /***/ }),
-/* 13 */
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 21 */,
+/* 22 */,
+/* 23 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_controller_js__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_directive_js__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__footerlink_js__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__links_less__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__links_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__links_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__links_directive_js__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__link_js__ = __webpack_require__(25);
+
 
 
 
@@ -54286,70 +54314,40 @@ NavLink () {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a
-    .module('app.footer', [])
-    .controller('FooterController', __WEBPACK_IMPORTED_MODULE_1__footer_controller_js__["a" /* FooterController */])
-    .directive('footerMenu', __WEBPACK_IMPORTED_MODULE_2__footer_directive_js__["a" /* footer */])
-    .factory('FooterLink', __WEBPACK_IMPORTED_MODULE_3__footerlink_js__["a" /* FooterLink */])
+    .module('app.link', [])
+    .directive('links', __WEBPACK_IMPORTED_MODULE_2__links_directive_js__["a" /* links */])
+    .factory('Link', __WEBPACK_IMPORTED_MODULE_3__link_js__["a" /* Link */])
     .name);
 
 
 /***/ }),
-/* 14 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = FooterController;
-function FooterController (FooterLink) {
-  const vm = this
-  vm.links = FooterLink.all()
-}
-
-
-/***/ }),
-/* 15 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = footer;
+/* harmony export (immutable) */ __webpack_exports__["a"] = Link;
 function
-footer () {
-  return {
-    templateUrl: 'app/footer/footer.html',
-    restrict: 'E',
-    controller: 'FooterController',
-    controllerAs: 'vm'
-  }
-}
-
-
-/***/ }),
-/* 16 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = FooterLink;
-function
-FooterLink () {
+Link () {
   const links = [
     {
       link: 'https://www.linkedin.com/in/jessicamariebarre/',
       label: 'LinkedIn',
-      iconClass: '' // none yet
+      iconClass: 'fa fa-2x fa-linkedin' // none yet
     },
     {
       link: 'https://github.com/jessamarie',
       label: 'GitHub',
-      iconClass: '' // none yet
+      iconClass: 'fa fa-2x fa-github-square' // none yet
     },
     {
-      link: '#',
+      link: 'https://github.com/jessamarie/jessamarie.github.io',
       label: 'Site Repo',
-      iconClass: '' // none yet
+      iconClass: 'fa fa-2x fa-github' // none yet
     },
     {
       link: 'https://drive.google.com/file/d/0ByPm40Cclm7bTERiZmtkSWJKVnc/view?usp=sharing',
       label: 'Resume',
-      iconClass: '' // none yet
+      iconClass: 'fa fa-2x fa-file-pdf-o' // none yet
     }
   ]
 
@@ -54360,6 +54358,44 @@ FooterLink () {
   function all () {
     return links
   }
+}
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = links;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__links_controller_js__ = __webpack_require__(28);
+
+
+function
+links () {
+  return {
+    templateUrl: 'app/links/links.html',
+    restrict: 'E',
+    controller: __WEBPACK_IMPORTED_MODULE_0__links_controller_js__["a" /* LinksController */],
+    controllerAs: 'links'
+  }
+}
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = LinksController;
+function LinksController (Link) {
+  const vm = this
+  vm.links = Link.all()
 }
 
 
