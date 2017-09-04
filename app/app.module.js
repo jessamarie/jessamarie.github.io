@@ -7,7 +7,7 @@ import angular from 'angular'
 // Modules
 import home from './home/home.module'
 import header from './header/header.module'
-import footer from './footer/footer.module'
+import links from './links/links.module'
 
 angular.module('app', [
   // dependencies
@@ -15,5 +15,5 @@ angular.module('app', [
   // custom
   home,
   header,
-  footer
+  links
 ])
