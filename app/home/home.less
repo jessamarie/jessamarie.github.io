@@ -2,57 +2,38 @@
 
 .home {
   .flex(column);
-  align-items: center;
   justify-content: space-around;
-  height: 90%;
-  margin: auto 0;
+  height: 100%;
 }
 
 .special-words {
   font-style: italic;
   font-weight: 900;
-  color: @special; // rgba(255, 0, 196, 1)
+  color: @special;
 }
 
 .intro {
-  font-size: 6vw;
+  height: 15%;
+  font-size: 5vw;
+  margin: 0 0 4% 0;
   font-style: bold;
-  margin: 0 auto 0 5px;
-  font-style: italic;
 }
 
 .brand-statement {
-  font-size: 35px;
+  font-size: 2.5vw;
   .flex(column);
   justify-content: space-between;
-  height: 70%;
+  height: 80%;
 }
 
 .part1 {
-  display: block;
-  text-align: left;
-  margin: 0 auto 5px 0;
+  align-self: flex-start;
 }
 
 .part2 {
-    display: block;
-    text-align: center;
-    margin: 0 auto 5px auto;
+  align-self: flex-end;
 }
 
 .part3 {
-  display: block;
-  text-align: right;
-}
-
-@media (max-width: 1020px) {
-  .brand-statement {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 720px) {
-  .brand-statement {
-    font-size: 20px;
-  }
+  align-self: center;
 }

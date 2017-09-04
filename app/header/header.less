@@ -1,28 +1,42 @@
 @import '../var.less';
 
 header {
-  text-align: center;
-  // border-bottom: 1px solid @pink;
-  padding: 5px 10px;
+  background-color: @white;
+  position: fixed;
+  left: 2%;
+  bottom: 2%;
+  width: 35%;
+  height: 7vh;
 }
+
+nav {
+  height: 100%;
+}
+
 
 nav ul {
-  display: flex;
-  justify-content: flex-end;
+  .flex(row);
+  height: 100%;
 }
 
-.logo {
-  margin: auto auto auto 0px;
-  height: 58px;
-  font-size: 30px;
+nav ul li {
+  .flex(row);
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-.nav-links {
-  margin: 0;
-  padding: 0 10px;
-  align-self: center;
+.nav-links a {
+  display: block;
+  text-align: center;
+  color: @special;
+  font-weight: 900;
+  font-size: 2.5vw;
+  text-decoration: none;
 }
 
 .nav-links a:hover {
-  background-color: gray;
+  background-color: @special;
+  color: @white;
 }

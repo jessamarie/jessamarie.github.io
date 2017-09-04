@@ -6,17 +6,20 @@
     <link rel="stylesheet" href="./dist/style.css">
     <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
-  <body data-ng-app="app">
+  <body class="background" data-ng-app="app">
     <header>
       <header-menu></header-menu>
     </header>
 
-    <main role="main" class="background" data-ui-view></main>
+    <links></links>
+
+    <main role="main" data-ui-view></main>
 
     <footer role="contentinfo">
-      <links></links>
-      <div class="copyright"><p> Made with <i class="fa fa-heart"></i>
-          by Jessica Marie, Copyright <i class="fa fa-copyright"></i>
+      <div class="copyright">
+          <p> Made with <i class="fa fa-heart"></i>
+          by Jessica Marie</p>
+          <p> Copyright <i class="fa fa-copyright"></i>
           2017</p>
       </div>
     </footer>
