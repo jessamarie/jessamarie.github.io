@@ -1,29 +1,4 @@
-/* Variables */
-// @import "~bootstrap/less/bootstrap";
-@fa-font-path: "~font-awesome/fonts";
-@import "~font-awesome/less/font-awesome";
-
-@skin: rgba(242,216,167,.9);  // #F2D8A7; //skin
-@milk-chocolate: rgba(115,80,60,0.6); // #73503C; // milk-chocolate
-@rose: rgba(89,30,35,1); // #591E23; //deep pink red
-@pink: rgba(217,78,103,1); // #D94E67; // pink
-@brown: rgba(166,133,114,0.6); // #A68572; // brown
-@white: rgba(255,255,255,1);
-@black: rgba(0,0,0,0.2);
-
-// Vivid and Sharp Theme
-@DarkCerise: #D83F87;
-@RoyalPurple: #2A1B3D;
-@DarkSlateBlue: #44318D;
-@Purple: #E98074;
-@Gray: #A4B3B6;
-
-//Clean and Energetic Theme
-@blueberry: #5680E9;
-@skyblue: #84CEEB;
-@blue: #5AB9EA;
-@amethyst: #C1C8E4;
-@violet: #8860D0;
+@import './var.less';
 
 html, body, header, main, footer, div, ul, li, a, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -31,30 +6,52 @@ html, body, header, main, footer, div, ul, li, a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  .theme(@amethyst, black);
+  font-family: 'Roboto', sans-serif;
+  .theme(@white, @rose);
   .flex(column);
   height: 100vh;
 }
 
 main {
+  color: @white;
   height: 100%;
+  padding: 5px;
   flex: 1;
 }
 
-header, footer {
-  .theme(@blueberry, black)
+.background {
+  background:
+    /* top, transparent red, faked with gradient */
+    linear-gradient(
+      rgba(217,78,103,0.5);
+      rgba(217,78,103,0.5);
+    ),
+    /* bottom, image */
+    url('https://i.imgur.com/euHPUfi.jpg');
+    background-size: cover;
 }
+
+
+ul {
+  list-style-type: none;
+}
+
+/***** Links ********/
 
 a {
-  color: black;
+  color: @rose;
+  font-style: bold;
+  text-decoration: none;
 }
 
-.theme(@bg, @font) {
-  background-color: @bg;
-  color: @font;
+a:focus, a:hover {
+  background-color: @brown;
 }
 
-.flex (@dir) {
-  display: flex;
-  flex-direction: @dir;
+.icon-bar {
+  background: @rose;
+}
+
+a:hover {
+  color: @pink;
 }

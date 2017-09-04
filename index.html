@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html data-ng-app="app">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Jessica Marie</title>
     <link rel="stylesheet" href="./dist/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   </head>
-  <body>
+  <body data-ng-app="app">
     <header>
       <header-menu></header-menu>
     </header>
 
-    <main data-ui-view></main>
+    <main role="main" class="background" data-ui-view></main>
 
-    <footer>
+    <footer role="contentinfo">
       <footer-menu></footer-menu>
     </footer>
 

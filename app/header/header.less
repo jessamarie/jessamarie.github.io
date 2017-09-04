@@ -1,13 +1,24 @@
+@import '../var.less';
+
 header {
-  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid @pink;
+  padding: 5px 10px;
 }
 
 nav ul {
   display: flex;
-  justify-content: center;
-  list-style-type: none;
+  justify-content: flex-end;
 }
 
-nav li {
-  margin: 0 auto;
+.logo {
+  margin: auto auto auto 0px;
+  height: 58px;
+  font-size: 30px;
+}
+
+.nav-links {
+  margin: auto 0;
+  padding: 10px 10px;
+  align-items: center;
 }
