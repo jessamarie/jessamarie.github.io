@@ -12,7 +12,7 @@ Project (Skill) {
     },
     {
       name: 'Reverse Hangman',
-      repo: 'http://github.com/jessamarie/Moments',
+      repo: 'http://github.com/jessamarie/hangman',
       description: 'A unique hangman game--in reverse!',
       keywords: ['JavaScript', 'JCanvas', 'HTML5', 'CSS3'],
       technologies: []
@@ -20,7 +20,7 @@ Project (Skill) {
     {
       name: 'jessamarie.github.io',
       repo: 'http://github.com/jessamarie/jessamarie.github.io',
-      description: 'My Portfolio Site',
+      description: 'My Githhub Portfolio',
       keywords: ['AngularJS', 'Webpack', 'HTML5', 'CSS3'],
       technologies: []
     }
@@ -28,8 +28,10 @@ Project (Skill) {
 
   populateTechnologies()
 
+  /* Populates project.technologies with the
+    icon classes in skills that match each keyword
+  */
   function populateTechnologies () {
-    console.log('populating')
     projects.forEach(function (project) {
       project.keywords.forEach(function (technology) {
         skills.forEach((skill) => {
@@ -39,8 +41,6 @@ Project (Skill) {
         })
       })
     })
-
-    console.log(projects);
   }
 
   return {
