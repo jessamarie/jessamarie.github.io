@@ -1,7 +1,7 @@
 export function Router ($stateProvider) {
   $stateProvider
   .state('home', {
-    url: '',
+    url: '/',
     templateUrl: 'app/home/home.html'
   })
 }

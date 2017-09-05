@@ -8,6 +8,9 @@ import angular from 'angular'
 import home from './home/home.module'
 import header from './header/header.module'
 import links from './links/links.module'
+import skills from './skills/skills.module'
+
+import { Router } from './app.routes.js'
 
 angular.module('app', [
   // dependencies
@@ -15,5 +18,7 @@ angular.module('app', [
   // custom
   home,
   header,
-  links
+  links,
+  skills
 ])
+.config(Router)

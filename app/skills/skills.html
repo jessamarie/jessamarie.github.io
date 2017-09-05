@@ -1,0 +1,16 @@
+<div class="skills">
+  <h2>Experienced</h2>
+  <div class="skillsContainer">
+    <div ng-repeat="skill in vm.goodSkills">
+      <i ng-if="skill.class" ng-class="skill.class"></i>
+      <span ng-if="!skill.class">{{skill.technology}}</span>
+    </div>
+  </div>
+  <h2>Familiar</h2>
+  <div class="skillsContainer">
+    <div ng-repeat="skill in vm.beginnerSkills">
+      <i ng-if="skill.class" ng-class="skill.class"></i>
+      <span ng-if="!skill.class">{{skill.technology}}</span>
+    </div>
+  </div>
+</div>
