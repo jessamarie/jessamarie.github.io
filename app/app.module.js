@@ -9,6 +9,7 @@ import home from './home/home.module'
 import header from './header/header.module'
 import links from './links/links.module'
 import skills from './skills/skills.module'
+import projects from './projects/projects.module'
 
 import { Router } from './app.routes.js'
 
@@ -19,6 +20,7 @@ angular.module('app', [
   home,
   header,
   links,
-  skills
+  skills,
+  projects
 ])
 .config(Router)

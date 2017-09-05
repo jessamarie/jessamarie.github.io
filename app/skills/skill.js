@@ -42,9 +42,19 @@ Skill () {
       class: 'devicon-nodejs-plain colored'
     },
     {
+      technology: 'Vuejs',
+      level: 'beginner',
+      class: 'devicon-vuejs-plain-wordmark colored'
+    },
+    {
+      technology: 'Webpack',
+      level: 'beginner',
+      class: 'devicon-webpack-plain colored'
+    },
+    {
       technology: 'express',
       level: 'beginner',
-      class: ''
+      class: 'devicon-express-original colored'
     },
     {
       technology: 'mongoDB',

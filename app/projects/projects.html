@@ -1,0 +1,16 @@
+<h1>{{vm.message}}</h1>
+
+<div class="projects">
+  <div class="projectsContainer">
+    <div ng-repeat="project in vm.projects">
+      <a href="{{project.repo}}" target="_blank"><h3>{{project.name}}</h3></a>
+      <h3>{{project.description}}</h3>
+      <div class="skillsContainer">
+        <div ng-repeat="skill in project.technologies">
+          <i ng-if="skill.class" ng-class="skill.class"></i>
+          <span ng-if="!skill.class">{{skill.technology}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
