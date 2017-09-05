@@ -54117,6 +54117,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_module__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_header_module__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__links_links_module__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__skills_skills_module__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__projects_projects_module__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routes_js__ = __webpack_require__(29);
 // Styles
 
 
@@ -54128,14 +54131,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+
+
+
 __WEBPACK_IMPORTED_MODULE_1_angular___default.a.module('app', [
   // dependencies
   'ui.router',
   // custom
   __WEBPACK_IMPORTED_MODULE_2__home_home_module__["a" /* default */],
   __WEBPACK_IMPORTED_MODULE_3__header_header_module__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_4__links_links_module__["a" /* default */]
+  __WEBPACK_IMPORTED_MODULE_4__links_links_module__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_5__skills_skills_module__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_6__projects_projects_module__["a" /* default */]
 ])
+.config(__WEBPACK_IMPORTED_MODULE_7__app_routes_js__["a" /* Router */])
 
 
 /***/ }),
@@ -54173,7 +54183,7 @@ __WEBPACK_IMPORTED_MODULE_1_angular___default.a.module('app', [
 function Router ($stateProvider) {
   $stateProvider
   .state('home', {
-    url: '',
+    url: '/',
     templateUrl: 'app/home/home.html'
   })
 }
@@ -54396,6 +54406,399 @@ links () {
 function LinksController (Link) {
   const vm = this
   vm.links = Link.all()
+}
+
+
+/***/ }),
+/* 29 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = Router;
+function Router ($stateProvider, $urlRouterProvider, $locationProvider) {
+  $locationProvider.html5Mode(true)
+  $urlRouterProvider.otherwise('/')
+}
+
+
+/***/ }),
+/* 30 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__skills_less__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__skills_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__skills_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__skills_routes_js__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__skill_js__ = __webpack_require__(34);
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a
+    .module('app.skills', [__WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs___default.a])
+    .config(__WEBPACK_IMPORTED_MODULE_3__skills_routes_js__["a" /* Router */])
+    .factory('Skill', __WEBPACK_IMPORTED_MODULE_4__skill_js__["a" /* Skill */])
+    .name);
+
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = Router;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__skills_controller_js__ = __webpack_require__(33);
+
+
+function Router ($stateProvider) {
+  $stateProvider
+  .state('skills', {
+    url: '/skills',
+    templateUrl: 'app/skills/skills.html',
+    controller: __WEBPACK_IMPORTED_MODULE_0__skills_controller_js__["a" /* SkillsController */],
+    controllerAs: 'vm'
+  })
+}
+
+
+/***/ }),
+/* 33 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = SkillsController;
+function SkillsController (Skill) {
+  this.skills = Skill.all()
+  this.goodSkills = Skill.allExperienced()
+  this.beginnerSkills = Skill.allBeginner()
+}
+
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = Skill;
+function
+Skill () {
+  const skills = [
+    {
+      technology: 'AngularJS',
+      level: 'experienced',
+      class: 'devicon-angularjs-plain colored'
+    },
+    {
+      technology: 'JavaScript',
+      level: 'experienced',
+      class: 'devicon-javascript-plain colored'
+    },
+    {
+      technology: 'Java',
+      level: 'experienced',
+      class: 'devicon-java-plain colored'
+    },
+    {
+      technology: 'c',
+      level: 'beginner',
+      class: 'devicon-c-plain colored'
+    },
+    {
+      technology: 'jQuery',
+      level: 'experienced',
+      class: 'devicon-jquery-plain-wordmark colored'
+    },
+    {
+      technology: 'Ruby',
+      level: 'experienced',
+      class: 'devicon-ruby-plain-wordmark colored'
+    },
+    {
+      technology: 'Ruby on Rails',
+      level: 'experienced',
+      class: 'devicon-rails-plain-wordmark colored'
+    },
+    {
+      technology: 'nodejs',
+      level: 'beginner',
+      class: 'devicon-nodejs-plain colored'
+    },
+    {
+      technology: 'Vuejs',
+      level: 'beginner',
+      class: 'devicon-vuejs-plain-wordmark colored'
+    },
+    {
+      technology: 'Webpack',
+      level: 'beginner',
+      class: 'devicon-webpack-plain colored'
+    },
+    {
+      technology: 'express',
+      level: 'beginner',
+      class: 'devicon-express-original colored'
+    },
+    {
+      technology: 'mongoDB',
+      level: 'beginner',
+      class: 'devicon-mongodb-plain-wordmark colored'
+    },
+    {
+      technology: 'react',
+      level: 'beginner',
+      class: 'devicon-react-original-wordmark colored'
+    },
+    {
+      technology: 'HTML5',
+      level: 'experienced',
+      class: 'devicon-html5-plain-wordmark colored'
+    },
+    {
+      technology: 'CSS3',
+      level: 'experienced',
+      class: 'devicon-css3-plain-wordmark colored'
+    },
+    {
+      technology: 'less',
+      level: 'experienced',
+      class: 'devicon-less-plain-wordmark colored'
+    },
+    {
+      technology: 'PostgreSQL',
+      level: 'experienced',
+      class: 'devicon-postgresql-plain-wordmark colored'
+    },
+    {
+      technology: 'linux',
+      level: 'experienced',
+      class: 'devicon-linux-plain colored'
+    },
+    {
+      technology: 'atom',
+      level: 'experienced',
+      class: 'devicon-atom-original colored'
+    },
+    {
+      technology: 'git',
+      level: 'experienced',
+      class: 'devicon-git-plain colored'
+    },
+    {
+      technology: 'Bootstrap',
+      level: 'beginner',
+      class: 'devicon-bootstrap-plain colored'
+    },
+    {
+      technology: 'Heroku',
+      level: 'beginner',
+      class: 'devicon-heroku-plain-wordmark colored'
+    },
+    {
+      technology: 'gulp',
+      level: 'beginner',
+      class: 'devicon-gulp-plain colored'
+    },
+    {
+      technology: 'grunt',
+      level: 'beginner',
+      class: 'devicon-grunt-line-wordmark colored'
+    },
+    {
+      technology: 'erlang',
+      level: 'beginner',
+      class: 'devicon-erlang-plain-wordmark colored'
+    },
+    {
+      technology: 'c++',
+      level: 'beginner',
+      class: 'devicon-cplusplus-plain colored'
+    },
+    {
+      technology: 'mysql',
+      level: 'beginner',
+      class: 'devicon-mysql-plain-wordmark colored'
+    },
+    {
+      technology: 'python',
+      level: 'beginner',
+      class: 'devicon-python-plain-wordmark colored'
+    },
+    {
+      technology: 'haskell',
+      level: 'beginner',
+      class: ''
+    },
+    {
+      technology: 'prolog',
+      level: 'beginner',
+      class: ''
+    }
+  ]
+
+  return {
+    all: all,
+    allExperienced: allExperienced,
+    allBeginner: allBeginner
+  }
+
+  function allExperienced () {
+    return skills.filter((skill) => {
+      return skill.level === 'experienced'
+    })
+  }
+
+  function allBeginner () {
+    return skills.filter((skill) => {
+      return skill.level === 'beginner'
+    })
+  }
+
+  function all () {
+    return skills
+  }
+}
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__projects_less__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__projects_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__projects_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__projects_routes_js__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__project_js__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__skills_skill_js__ = __webpack_require__(34);
+
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a
+    .module('app.projects', [__WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs___default.a])
+    .config(__WEBPACK_IMPORTED_MODULE_3__projects_routes_js__["a" /* Router */])
+    .factory('Project', __WEBPACK_IMPORTED_MODULE_4__project_js__["a" /* Project */])
+    .name);
+
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 37 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = Router;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__projects_controller_js__ = __webpack_require__(39);
+
+
+function Router ($stateProvider) {
+  $stateProvider
+  .state('projects', {
+    url: '/projects',
+    templateUrl: 'app/projects/projects.html',
+    controller: __WEBPACK_IMPORTED_MODULE_0__projects_controller_js__["a" /* ProjectsController */],
+    controllerAs: 'vm'
+  })
+}
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = Project;
+function
+Project (Skill) {
+  const skills = Skill.all()
+
+  const projects = [
+    {
+      name: 'Moments',
+      repo: 'http://github.com/jessamarie/Moments',
+      description: 'What else happened on the day you were born?',
+      keywords: ['Ruby on Rails', 'AngularJS', 'HTML5', 'CSS3'],
+      technologies: []
+    },
+    {
+      name: 'Reverse Hangman',
+      repo: 'http://github.com/jessamarie/Moments',
+      description: 'A unique hangman game--in reverse!',
+      keywords: ['JavaScript', 'JCanvas', 'HTML5', 'CSS3'],
+      technologies: []
+    },
+    {
+      name: 'jessamarie.github.io',
+      repo: 'http://github.com/jessamarie/jessamarie.github.io',
+      description: 'My Portfolio Site',
+      keywords: ['AngularJS', 'Webpack', 'HTML5', 'CSS3'],
+      technologies: []
+    }
+  ]
+
+  populateTechnologies()
+
+  function populateTechnologies () {
+    console.log('populating')
+    projects.forEach(function (project) {
+      project.keywords.forEach(function (technology) {
+        skills.forEach((skill) => {
+          if (skill.technology === technology) {
+            project.technologies.push(skill)
+          }
+        })
+      })
+    })
+
+    console.log(projects);
+  }
+
+  return {
+    all: all
+  }
+
+  function all () {
+    return projects
+  }
+}
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = ProjectsController;
+function ProjectsController (Project) {
+  this.message = 'Olah'
+  this.projects = Project.all()
 }
 
 
