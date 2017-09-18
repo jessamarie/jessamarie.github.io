@@ -1,6 +1,7 @@
 @import './var.less';
 
-html, body, header, main, footer, div, ul, li, a, p, h1, h2, h3, h4, h5, h6, span {
+html, body, header, main, footer, div, ul, li, a, p,
+h1, h2, h3, h4, h5, h6, span, img {
   margin: 0;
   padding: 0;
 }
@@ -9,6 +10,7 @@ body {
   font-family: @font-family;
   color: @white;
   .flex(column);
+  align-items: center;
   height: 100vh;
 }
 
@@ -19,29 +21,63 @@ body {
   background-position: center bottom;
 }
 
-main {
-  max-height: 75vh;
-  height: 75vh;
-  padding: 6vw;
+.wrapper {
   flex: 1;
+  width: 100%;
+  .flex-props(row, center, flex-start);
+}
+
+.outerContainer {
+  // overflow-y: scroll;
+  width: 90%;
+  height: 94vh;
+}
+
+.outerContainer a {
+  color: @special;
+  text-decoration: none;
+}
+
+.innerContainer {
+  min-width: 93%;
+  max-width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
+  height: 100%;
+  background-color: @black;
+}
+
+header {
+  align-self: flex-end;
+  width: 50%;
+  margin: 2vh 2vw;
 }
 
 footer {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 1%;
-  right: 1%;
-  color: @white;
+  align-self: flex-end;
+  width: 50%;
+  text-align: right;
+  font-size: 1.2vw;
 }
 
-
-.copyright {
-  margin-left: auto;
-  align-self: flex-end;
-  text-align: right;
-  font-size: 1vw;
+h2, h3 {
+  text-align: center;
+  margin: 3%;
 }
 
 ul { list-style-type: none; }
+
+/** Testing */
+
+// .wrapper {
+//   border: 1px green solid;
+// }
+
+// footer {
+//   border: 1px solid yellow;
+// }
+//
+// header {
+//   border: 1px white solid;
+// }

@@ -5,16 +5,11 @@
 @import "~devicon-2.2/devicon.css";
 @import "~devicon-2.2/devicon-colors.css";
 
-// In Use
-
 // colors
-@RoyalPurple: #2A1B3D;
-@skyblue: #84CEEB;
+@skyblue: rgb(132,206,235); //#84CEEB;
 @black: rgba(0,0,0,0.5);
 @white: rgba(255,255,255,1);
-@rose: rgba(89,30,35,1); // #591E23; //deep pink red
 @special: @skyblue;
-@fullPink: rgba(217,78,103,1); // #D94E67; // pink
 @pink: rgba(217,78,103,0.5); // #D94E67; // pink
 // other
 @bg-gradient: linear-gradient(@pink; @pink);
@@ -29,4 +24,11 @@
 .flex (@dir) {
   display: flex;
   flex-direction: @dir;
+}
+
+.flex-props (@dir, @justify, @align) {
+  display: flex;
+  flex-direction: @dir;
+  justify-content: @justify;
+  align-items: @align;
 }
