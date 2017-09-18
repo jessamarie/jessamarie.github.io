@@ -1,20 +1,23 @@
 <div class="outerContainer">
+
   <div class="innerContainer projects">
-    <div class="">
+    <div class="heading">
       <h2>Projects</h2>
       <h3>Click below to learn more about the projects I have worked on</h3>
     </div>
-    <div class="project" ng-repeat="project in vm.projects">
-      <h3 class="project-name"><a href="{{project.repo}}" target="_blank">{{project.name}}</a></h3>
-      <div class="project-skills">
-        <div class="project-skill" ng-repeat="skill in project.technologies">
-          <i ng-if="skill.class" ng-class="skill.class"></i>
-          <span ng-if="!skill.class">{{skill.technology}}</span>
+    <div class="project-list">
+      <div class="project" ng-repeat="project in vm.projects">
+        <h3 class="project-name"><a href="{{project.repo}}" target="_blank">{{project.name}}</a></h3>
+        <div class="project-skills">
+          <div class="project-skill" ng-repeat="skill in project.technologies">
+            <i ng-if="skill.iconClass" ng-class="skill.iconClass"></i>
+            <div ng-if="skill.class" ng-class="skill.class"></div>
+          </div>
         </div>
+        <p class="project-desc">{{project.description}}</p>
       </div>
-      <p class="project-desc">{{project.description}}</p>
     </div>
-      </div>
+  </div>
 </div>
 
 <links></links>

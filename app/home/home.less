@@ -1,16 +1,17 @@
 @import '../var.less';
 
 .home {
-  .flex(column);
-  justify-content: space-around;
-  margin-left: 1vh;
-  height: 99%;
+  background: none;
+  .flex-props(column, center, center);
+  height: 85%;
+
 }
 
 .intro {
+  text-align: center;
   height: 15%;
-  font-size: 4.5vw;
-  margin: 0 0 4% 0;
+  font-size: 4.5vmax;
+  margin-bottom: 10%;
   font-style: bold;
 }
 
@@ -21,21 +22,36 @@
 }
 
 .brand-statement {
-  // font-style: italic;
-  font-size: 2.5vw;
+  font-size: 2.5vmax;
   .flex(column);
   justify-content: space-between;
   height: 80%;
 }
 
-.part1 {
-  align-self: flex-start;
-}
+.part1 { align-self: flex-start; }
 
 .part2 {
   align-self: flex-end;
+  text-align: right;
 }
 
-.part3 {
-  align-self: center;
+.part3 { align-self: center; }
+
+@media (max-width: 720px) {
+  .intro {
+    font-size: 4vmax;
+  }
+
+  main {
+    margin-top: 4%;
+  }
+
+  .home {
+    justify-content: space-around;
+  }
+
+  .brand-statement {
+    margin-top: 1px;
+    max-height: 65%;
+  }
 }

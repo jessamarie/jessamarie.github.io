@@ -12,6 +12,7 @@ body {
   .flex(column);
   align-items: center;
   height: 100vh;
+  padding: 2% 2% 0 2%;
 }
 
 .background {
@@ -28,9 +29,8 @@ body {
 }
 
 .outerContainer {
-  // overflow-y: scroll;
   width: 90%;
-  height: 94vh;
+  height: 93vh;
 }
 
 .outerContainer a {
@@ -45,16 +45,20 @@ body {
   margin-right: auto;
   overflow-y: scroll;
   height: 100%;
-  background-color: @black;
+  background-color: @container-bg;
 }
 
 header {
+  text-align: center;
+  margin-bottom: 2%;
   align-self: flex-end;
-  width: 50%;
-  margin: 2vh 2vw;
+  width: 50vw;
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
   align-self: flex-end;
   width: 50%;
   text-align: right;

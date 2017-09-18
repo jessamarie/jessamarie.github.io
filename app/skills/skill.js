@@ -4,152 +4,152 @@ Skill () {
     {
       technology: 'AngularJS',
       level: 'experienced',
-      class: 'devicon-angularjs-plain-wordmark colored'
+      iconClass: 'devicon-angularjs-plain-wordmark colored'
     },
     {
       technology: 'JavaScript',
       level: 'experienced',
-      class: 'devicon-javascript-plain colored'
+      iconClass: 'devicon-javascript-plain colored'
     },
     {
       technology: 'Java',
       level: 'experienced',
-      class: 'devicon-java-plain-wordmark colored'
+      iconClass: 'devicon-java-plain-wordmark colored'
     },
     {
       technology: 'C',
       level: 'experienced',
-      class: 'devicon-c-plain colored'
+      iconClass: 'devicon-c-plain colored'
     },
     {
       technology: 'jQuery',
       level: 'experienced',
-      class: 'devicon-jquery-plain-wordmark colored'
+      iconClass: 'devicon-jquery-plain-wordmark colored'
     },
     {
       technology: 'Ruby',
       level: 'experienced',
-      class: 'devicon-ruby-plain-wordmark colored'
+      iconClass: 'devicon-ruby-plain-wordmark colored'
     },
     {
       technology: 'Ruby on Rails',
       level: 'experienced',
-      class: 'devicon-rails-plain-wordmark colored'
+      iconClass: 'devicon-rails-plain-wordmark colored'
     },
     {
       technology: 'nodejs',
       level: 'beginner',
-      class: 'devicon-nodejs-plain-wordmark colored'
+      iconClass: 'devicon-nodejs-plain-wordmark colored'
     },
     {
       technology: 'Vuejs',
       level: 'beginner',
-      class: 'devicon-vuejs-plain-wordmark colored'
+      iconClass: 'devicon-vuejs-plain-wordmark colored'
     },
     {
       technology: 'Webpack',
       level: 'beginner',
-      class: 'devicon-webpack-plain-wordmark colored'
+      iconClass: 'devicon-webpack-plain-wordmark colored'
     },
     {
       technology: 'express',
       level: 'beginner',
-      class: 'devicon-express-original-wordmark'
+      iconClass: 'devicon-express-original-wordmark'
     },
     {
       technology: 'mongoDB',
       level: 'beginner',
-      class: 'devicon-mongodb-plain-wordmark colored'
+      iconClass: 'devicon-mongodb-plain-wordmark colored'
     },
     {
       technology: 'React',
       level: 'beginner',
-      class: 'devicon-react-original-wordmark colored'
+      iconClass: 'devicon-react-original-wordmark colored'
     },
     {
       technology: 'HTML5',
       level: 'experienced',
-      class: 'devicon-html5-plain-wordmark colored'
+      iconClass: 'devicon-html5-plain-wordmark colored'
     },
     {
       technology: 'CSS3',
       level: 'experienced',
-      class: 'devicon-css3-plain-wordmark colored'
+      iconClass: 'devicon-css3-plain-wordmark colored'
     },
     {
       technology: 'less',
       level: 'experienced',
-      class: 'devicon-less-plain-wordmark colored'
+      iconClass: 'devicon-less-plain-wordmark colored'
     },
     {
       technology: 'PostgreSQL',
       level: 'experienced',
-      class: 'devicon-postgresql-plain-wordmark colored'
+      iconClass: 'devicon-postgresql-plain-wordmark colored'
     },
     {
       technology: 'linux',
       level: 'experienced',
-      class: 'devicon-linux-plain colored'
+      iconClass: 'devicon-linux-plain colored'
     },
     {
       technology: 'atom',
       level: 'experienced',
-      class: 'devicon-atom-original-wordmark'
+      iconClass: 'devicon-atom-original-wordmark'
     },
     {
       technology: 'git',
       level: 'experienced',
-      class: 'devicon-git-plain-wordmark colored'
+      iconClass: 'devicon-git-plain-wordmark colored'
     },
     {
       technology: 'Bootstrap',
       level: 'beginner',
-      class: 'devicon-bootstrap-plain-wordmark colored'
+      iconClass: 'devicon-bootstrap-plain-wordmark colored'
     },
     {
       technology: 'Heroku',
       level: 'beginner',
-      class: 'devicon-heroku-plain-wordmark colored'
+      iconClass: 'devicon-heroku-plain-wordmark colored'
     },
     {
       technology: 'gulp',
       level: 'beginner',
-      class: 'devicon-gulp-plain colored'
+      iconClass: 'devicon-gulp-plain colored'
     },
     {
       technology: 'grunt',
       level: 'beginner',
-      class: 'devicon-grunt-line-wordmark colored'
+      iconClass: 'devicon-grunt-line-wordmark colored'
     },
     {
       technology: 'erlang',
       level: 'beginner',
-      class: 'devicon-erlang-plain-wordmark colored'
+      iconClass: 'devicon-erlang-plain-wordmark colored'
     },
     {
       technology: 'c++',
       level: 'beginner',
-      class: 'devicon-cplusplus-plain colored'
+      iconClass: 'devicon-cplusplus-plain colored'
     },
     {
       technology: 'mysql',
       level: 'beginner',
-      class: 'devicon-mysql-plain-wordmark colored'
+      iconClass: 'devicon-mysql-plain-wordmark colored'
     },
     {
       technology: 'python',
       level: 'beginner',
-      class: 'devicon-python-plain-wordmark colored'
+      iconClass: 'devicon-python-plain-wordmark colored'
     },
     {
       technology: 'haskell',
       level: 'beginner',
-      class: ''
+      class: 'haskell'
     },
     {
       technology: 'prolog',
       level: 'beginner',
-      class: ''
+      class: 'prolog'
     }
   ]
 

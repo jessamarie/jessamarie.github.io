@@ -1,12 +1,12 @@
 @import '../var.less';
 
 links {
-  background-color: @black;
-  height: 30%;
-  width: 6vh;
+  background-color: @container-bg;
+  height: auto;
+  width: auto;
   font-size: 1.6em;
-  // margin-right: auto;
-  // margin-left: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 links ul {
@@ -17,7 +17,7 @@ links ul {
 .links li i { color: @special; }
 
 @media (min-width: 720px) {
-  .links li i  {
-    // font-size: 3em;
+  links {
+    font-size: 2.5em;
   }
 }

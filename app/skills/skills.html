@@ -3,9 +3,9 @@
   <h2>Skills</h2>
   <h3>See below to review the technologies I have worked with</h3>
   <div class="skillsContainer">
-    <div ng-repeat="skill in vm.skills">
-      <i ng-if="skill.class" ng-class="skill.class"></i>
-      <span ng-if="!skill.class">{{skill.technology}}</span>
+    <div class="skill" ng-repeat="skill in vm.skills">
+      <i ng-if="skill.iconClass" ng-class="skill.iconClass"></i>
+      <div ng-if="skill.class" ng-class="skill.class"></div>
     </div>
   </div>
 </div>
