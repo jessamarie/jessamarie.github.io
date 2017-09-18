@@ -3852,7 +3852,7 @@ body {
   padding: 2% 2% 0 2%;
 }
 .background {
-  background: linear-gradient(rgba(217, 78, 103, 0.5), rgba(217, 78, 103, 0.5)), url('https://i.imgur.com/euHPUfi.jpg');
+  background: linear-gradient(rgba(217, 78, 103, 0.6), rgba(217, 78, 103, 0.6)), url('https://i.imgur.com/euHPUfi.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center bottom;
@@ -13335,6 +13335,15 @@ links ul {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+links ul a {
+  text-decoration: none;
+}
+.GA {
+  margin: 5% 0 0 0;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
 }
 .links li i {
   color: #a2e5ff;
