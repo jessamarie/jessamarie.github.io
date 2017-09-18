@@ -12,6 +12,10 @@ NavLink () {
     {
       state: 'projects',
       name: 'Projects'
+    },
+    {
+      state: 'contact',
+      name: 'Contact'
     }
   ]
 

@@ -54304,7 +54304,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__links_links_module__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__skills_skills_module__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__projects_projects_module__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routes_js__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__contact_contact_module__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_routes_js__ = __webpack_require__(30);
 // Styles
 
 
@@ -54312,6 +54313,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 // Modules
+
 
 
 
@@ -54328,9 +54330,10 @@ __WEBPACK_IMPORTED_MODULE_1_angular___default.a.module('app', [
   __WEBPACK_IMPORTED_MODULE_3__header_header_module__["a" /* default */],
   __WEBPACK_IMPORTED_MODULE_4__links_links_module__["a" /* default */],
   __WEBPACK_IMPORTED_MODULE_5__skills_skills_module__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_6__projects_projects_module__["a" /* default */]
+  __WEBPACK_IMPORTED_MODULE_6__projects_projects_module__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_7__contact_contact_module__["a" /* default */]
 ])
-.config(__WEBPACK_IMPORTED_MODULE_7__app_routes_js__["a" /* Router */])
+.config(__WEBPACK_IMPORTED_MODULE_8__app_routes_js__["a" /* Router */])
 
 
 /***/ }),
@@ -54477,6 +54480,10 @@ NavLink () {
     {
       state: 'projects',
       name: 'Projects'
+    },
+    {
+      state: 'contact',
+      name: 'Contact'
     }
   ]
 
@@ -54578,7 +54585,7 @@ Link () {
       iconClass: 'fa fa-2x fa-github' // none yet
     },
     {
-      link: 'https://drive.google.com/file/d/0ByPm40Cclm7bTERiZmtkSWJKVnc/view?usp=sharing',
+      link: 'https://drive.google.com/file/d/0ByPm40Cclm7bWGt3UGtvNlV2QXc/view?usp=sharing',
       label: 'Resume',
       iconClass: 'fa fa-2x fa-file-pdf-o' // none yet
     }
@@ -54810,6 +54817,53 @@ Project (Skill) {
 function Router ($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true)
   $urlRouterProvider.otherwise('/')
+}
+
+
+/***/ }),
+/* 31 */,
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_less__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__contact_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contact_routes_js__ = __webpack_require__(34);
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_angular___default.a
+    .module('app.contact', [__WEBPACK_IMPORTED_MODULE_1__uirouter_angularjs___default.a])
+    .config(__WEBPACK_IMPORTED_MODULE_3__contact_routes_js__["a" /* Router */])
+    .name);
+
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = Router;
+function Router ($stateProvider) {
+  $stateProvider
+  .state('contact', {
+    url: '/contact',
+    templateUrl: 'app/contact/contact.html'
+  })
 }
 
 

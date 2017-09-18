@@ -17,7 +17,7 @@ Link () {
       iconClass: 'fa fa-2x fa-github' // none yet
     },
     {
-      link: 'https://drive.google.com/file/d/0ByPm40Cclm7bTERiZmtkSWJKVnc/view?usp=sharing',
+      link: 'https://drive.google.com/file/d/0ByPm40Cclm7bWGt3UGtvNlV2QXc/view?usp=sharing',
       label: 'Resume',
       iconClass: 'fa fa-2x fa-file-pdf-o' // none yet
     }
