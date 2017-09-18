@@ -4,6 +4,13 @@ Project (Skill) {
 
   const projects = [
     {
+      name: 'Recall',
+      repo: 'http://github.com/jessamarie/recall',
+      description: 'An application to help study keywords.',
+      keywords: ['React', 'CSS3', 'HTML5', 'Webpack'],
+      technologies: []
+    },
+    {
       name: 'Moments',
       repo: 'http://github.com/jessamarie/Moments',
       description: 'What else happened on the day you were born?',
@@ -12,9 +19,16 @@ Project (Skill) {
     },
     {
       name: 'Reverse Hangman',
-      repo: 'http://github.com/jessamarie/hangman',
+      repo: 'http://github.com/jessamarie/hangman/',
       description: 'A unique hangman game--in reverse!',
       keywords: ['JavaScript', 'JCanvas', 'HTML5', 'CSS3'],
+      technologies: []
+    },
+    {
+      name: 'Mystery Lunch',
+      repo: 'http://github.com/jessamarie/mystery-lunch/',
+      description: 'An application where you can order a random meal from a restaurant.',
+      keywords: ['Ruby on Rails', 'Ruby', 'HTML5', 'CSS3'],
       technologies: []
     },
     {

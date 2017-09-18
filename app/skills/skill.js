@@ -4,7 +4,7 @@ Skill () {
     {
       technology: 'AngularJS',
       level: 'experienced',
-      class: 'devicon-angularjs-plain colored'
+      class: 'devicon-angularjs-plain-wordmark colored'
     },
     {
       technology: 'JavaScript',
@@ -14,11 +14,11 @@ Skill () {
     {
       technology: 'Java',
       level: 'experienced',
-      class: 'devicon-java-plain colored'
+      class: 'devicon-java-plain-wordmark colored'
     },
     {
-      technology: 'c',
-      level: 'beginner',
+      technology: 'C',
+      level: 'experienced',
       class: 'devicon-c-plain colored'
     },
     {
@@ -39,7 +39,7 @@ Skill () {
     {
       technology: 'nodejs',
       level: 'beginner',
-      class: 'devicon-nodejs-plain colored'
+      class: 'devicon-nodejs-plain-wordmark colored'
     },
     {
       technology: 'Vuejs',
@@ -49,12 +49,12 @@ Skill () {
     {
       technology: 'Webpack',
       level: 'beginner',
-      class: 'devicon-webpack-plain colored'
+      class: 'devicon-webpack-plain-wordmark colored'
     },
     {
       technology: 'express',
       level: 'beginner',
-      class: 'devicon-express-original colored'
+      class: 'devicon-express-original-wordmark'
     },
     {
       technology: 'mongoDB',
@@ -62,7 +62,7 @@ Skill () {
       class: 'devicon-mongodb-plain-wordmark colored'
     },
     {
-      technology: 'react',
+      technology: 'React',
       level: 'beginner',
       class: 'devicon-react-original-wordmark colored'
     },
@@ -94,17 +94,17 @@ Skill () {
     {
       technology: 'atom',
       level: 'experienced',
-      class: 'devicon-atom-original colored'
+      class: 'devicon-atom-original-wordmark'
     },
     {
       technology: 'git',
       level: 'experienced',
-      class: 'devicon-git-plain colored'
+      class: 'devicon-git-plain-wordmark colored'
     },
     {
       technology: 'Bootstrap',
       level: 'beginner',
-      class: 'devicon-bootstrap-plain colored'
+      class: 'devicon-bootstrap-plain-wordmark colored'
     },
     {
       technology: 'Heroku',
