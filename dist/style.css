@@ -1481,7 +1481,7 @@
 .devicon-zend-plain-wordmark.colored,
 .devicon-zend-plain.colored {
 	color: #68b604;
-}/* Variables */
+}@import url(https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext);/* Variables */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3842,11 +3842,13 @@ img {
 }
 body {
   font-family: 'Raleway', sans-serif;
+  font-weight: 300;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
   padding: 2% 2% 0 2%;
 }
 .background {
@@ -3882,7 +3884,7 @@ body {
 }
 header {
   text-align: center;
-  margin-bottom: 2%;
+  margin: 2% 0 2% 0;
   align-self: flex-end;
   width: 60vw;
 }
@@ -3896,15 +3898,16 @@ footer {
   font-size: 1.2vw;
 }
 h2,
-h3 {
+h3,
+h4 {
   text-align: center;
+  font-weight: 500;
   margin: 3%;
 }
 ul {
   list-style-type: none;
 }
-/** Testing */
-/* Variables */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext);/* Variables */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -6246,7 +6249,7 @@ iframe {
   width: 100%;
   height: 100%;
 }
-/* Variables */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext);/* Variables */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -8615,7 +8618,7 @@ iframe {
 .project-desc {
   margin: 2%;
 }
-/* Variables */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext);/* Variables */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -10980,7 +10983,7 @@ iframe {
   background-size: contain;
   background-repeat: no-repeat;
 }
-/* Variables */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext);/* Variables */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -13341,7 +13344,7 @@ links ul {
     font-size: 2.5em;
   }
 }
-/* Variables */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext);/* Variables */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -15709,7 +15712,7 @@ nav ul li {
 .active {
   color: #ffffff;
 }
-/* Variables */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext);/* Variables */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -18056,15 +18059,19 @@ nav ul li {
   height: 85%;
 }
 .intro {
-  text-align: center;
+  width: 100%;
+  text-align: left;
   height: 15%;
-  font-size: 4.5vmax;
+  font-size: 4.2vmax;
   margin-bottom: 10%;
-  font-style: bold;
+  font-weight: 400;
+}
+.second {
+  text-align: center;
 }
 .special-words {
   font-style: italic;
-  font-weight: 900;
+  font-weight: 800;
   color: #a2e5ff;
 }
 .brand-statement {
