@@ -3835,7 +3835,8 @@ h3,
 h4,
 h5,
 h6,
-span {
+span,
+img {
   margin: 0;
   padding: 0;
 }
@@ -3844,7 +3845,9 @@ body {
   color: #ffffff;
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100vh;
+  padding: 2% 2% 0 2%;
 }
 .background {
   background: linear-gradient(rgba(217, 78, 103, 0.5), rgba(217, 78, 103, 0.5)), url('https://i.imgur.com/euHPUfi.jpg');
@@ -3852,30 +3855,55 @@ body {
   background-size: cover;
   background-position: center bottom;
 }
-main {
-  max-height: 75vh;
-  height: 75vh;
-  padding: 6vw;
+.wrapper {
   flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.outerContainer {
+  width: 90%;
+  height: 93vh;
+}
+.outerContainer a {
+  color: #a2e5ff;
+  text-decoration: none;
+}
+.innerContainer {
+  min-width: 93%;
+  max-width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
+  height: 100%;
+  background-color: rgba(82, 56, 56, 0.5);
+}
+header {
+  text-align: center;
+  margin-bottom: 2%;
+  align-self: flex-end;
+  width: 50vw;
 }
 footer {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
   position: fixed;
-  bottom: 1%;
-  right: 1%;
-  color: #ffffff;
-}
-.copyright {
-  margin-left: auto;
+  bottom: 0;
+  right: 0;
   align-self: flex-end;
+  width: 50%;
   text-align: right;
-  font-size: 1vw;
+  font-size: 1.2vw;
+}
+h2,
+h3 {
+  text-align: center;
+  margin: 3%;
 }
 ul {
   list-style-type: none;
 }
+/** Testing */
 /* Variables */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -6215,33 +6243,35 @@ ul {
   clip: auto;
 }
 .projects {
-  margin-right: 3vw;
-  height: 100%;
+  overflow-y: scroll;
 }
-.projectsContainer {
-  background-color: rgba(0, 0, 0, 0.5);
+.project-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-}
-.projectsContainer a {
-  color: #84CEEB;
-  text-decoration: none;
 }
 .project {
   width: 400px;
-  height: 200px;
+  height: 160px;
   text-align: center;
 }
-.project * {
-  margin: 10px 0;
+.project-name {
+  margin: 2%;
 }
-.projectsContainer div {
-  margin-bottom: 5px;
+.project-skills {
+  margin: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.projects .skillsContainer {
-  font-size: 1em;
+.project-skill {
+  font-size: 2em;
+}
+.project-desc {
+  margin: 2%;
 }
 /* Variables */
 /*!
@@ -8581,35 +8611,32 @@ ul {
   overflow: visible;
   clip: auto;
 }
-.skills {
-  background-color: rgba(0, 0, 0, 0.5);
-  margin-right: 3vw;
-  height: 100%;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-h2 {
-  text-align: center;
-}
 .skillsContainer {
+  margin-top: 3%;
   max-width: 100%;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
 }
-.skillsContainer div {
-  margin-right: 1%;
-  margin-bottom: 1%;
+.skillsContainer i {
+  font-size: 6em;
 }
-i {
-  font-size: 2em;
+.skill {
+  margin: 1% 1%;
 }
-@media (min-width: 900px) {
-  i {
-    font-size: 3.5em;
-  }
+.haskell {
+  background: url('https://d1q6f0aelx0por.cloudfront.net/product-logos/8dd9679a-9dbc-42a3-b5da-4ff5ad97bc63-haskell.png');
+  width: 10vw;
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.prolog {
+  background: url('http://www.swi-prolog.org/icons/swipl.png');
+  width: 10.5vw;
+  height: 20vh;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /* Variables */
 /*!
@@ -10950,13 +10977,27 @@ i {
   clip: auto;
 }
 links {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-  right: 1%;
-  top: 1%;
+  background-color: rgba(82, 56, 56, 0.5);
+  height: auto;
+  width: auto;
+  font-size: 1.6em;
+  margin-left: auto;
+  margin-right: auto;
+}
+links ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .links li i {
-  color: #84CEEB;
+  color: #a2e5ff;
+}
+@media (min-width: 720px) {
+  links {
+    font-size: 2.5em;
+  }
 }
 /* Variables */
 /*!
@@ -13296,14 +13337,6 @@ links {
   overflow: visible;
   clip: auto;
 }
-header {
-  background-color: #ffffff;
-  position: fixed;
-  left: 2%;
-  bottom: 2%;
-  width: 35%;
-  height: 7vh;
-}
 nav {
   height: 100%;
 }
@@ -13322,14 +13355,16 @@ nav ul li {
 }
 .nav-links a {
   display: block;
-  text-align: center;
-  color: #84CEEB;
+  width: 100%;
+  color: #a2e5ff;
   font-weight: 900;
-  font-size: 2.5vw;
+  font-size: 2.5vmax;
   text-decoration: none;
 }
 .nav-links a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+.active {
   color: #ffffff;
 }
 /* Variables */
@@ -15671,24 +15706,27 @@ nav ul li {
   clip: auto;
 }
 .home {
+  background: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 85%;
+}
+.intro {
+  text-align: center;
+  height: 15%;
+  font-size: 4.5vmax;
+  margin-bottom: 10%;
+  font-style: bold;
 }
 .special-words {
   font-style: italic;
   font-weight: 900;
-  color: #84CEEB;
-}
-.intro {
-  height: 15%;
-  font-size: 5vw;
-  margin: 0 0 4% 0;
-  font-style: bold;
+  color: #a2e5ff;
 }
 .brand-statement {
-  font-size: 2.5vw;
+  font-size: 2.5vmax;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15699,7 +15737,23 @@ nav ul li {
 }
 .part2 {
   align-self: flex-end;
+  text-align: right;
 }
 .part3 {
   align-self: center;
+}
+@media (max-width: 720px) {
+  .intro {
+    font-size: 4vmax;
+  }
+  main {
+    margin-top: 4%;
+  }
+  .home {
+    justify-content: space-around;
+  }
+  .brand-statement {
+    margin-top: 1px;
+    max-height: 65%;
+  }
 }
