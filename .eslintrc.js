@@ -8,9 +8,7 @@ module.exports = {
     'airbnb',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended',
-    'prettier', // esling-config-prettier
-    'prettier/react'
+    'plugin:prettier/recommended'
   ],
   parserOptions: {
     ecmaFeatures: {
