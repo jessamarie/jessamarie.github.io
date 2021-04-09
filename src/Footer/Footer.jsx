@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="Footer">
       <LinkContainer />
-      Made with &hearts; by Jessa &copy; {year}
+      <p>Made with &hearts; by Jessa &copy; {year}</p>
     </footer>
   );
 }

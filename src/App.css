@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 .App {
   text-align: center;
   background-color: #1f0318;
+  font-family: 'Raleway', sans-serif;
   /* font-size: calc(10px + 2vmin); */
   color: #f5e3e0;
   min-height: 100vh;
@@ -9,8 +12,20 @@
   flex-direction: column;
 }
 
-.body {
+/* container */
+header {
+  padding-top: 15vh;
+  flex: 0;
+}
+
+.body-container {
+  margin: 10vh;
   flex: 1;
+}
+
+/* pages */
+.about {
+  font-size: 2rem;
 }
 
 .App-logo {
@@ -54,6 +69,11 @@
 
 a {
   color: #10ffcb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d282a6;
 }
 
 li {
@@ -63,3 +83,10 @@ li {
 .links-wrapper {
   list-style: none;
 }
+
+
+/* @media screen and (min-width: 780px) {
+  .full-width-img {
+  margin: auto;
+  width: 90%;
+  } */
