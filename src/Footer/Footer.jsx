@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import './Footer.scss';
 import LinkContainer from './LinkContainer/LinkContainer';
 
 function Footer() {
@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="Footer">
       <LinkContainer />
-      Made with &hearts; by Jessa &copy; {year}
+      <p>Made with &hearts; by Jessa &copy; {year}</p>
     </footer>
   );
 }
