@@ -1,6 +1,6 @@
 import React from 'react';
 import Links from './Links';
-import './Links.css';
+import './Links.scss';
 
 function LinkContainer() {
   function ListItems() {

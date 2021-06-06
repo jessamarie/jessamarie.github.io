@@ -44,7 +44,7 @@ const Projects = [
     name: 'jessamarie.github.io',
     repo: 'http://github.com/jessamarie/jessamarie.github.io',
     description: 'My Githhub Portfolio',
-    technologies: [LOGOS.react, LOGOS.webpack],
+    technologies: [LOGOS.react],
     imgName: sitePhoto
   },
   {

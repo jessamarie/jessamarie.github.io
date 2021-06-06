@@ -1,6 +1,6 @@
 import React from 'react';
 import Projects from './Projects';
-import './Projects.css';
+import './Projects.scss';
 
 function ProjectsPage() {
   function getTagNames(projectName, technologies) {

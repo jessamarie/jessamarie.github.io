@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css';
+import './About.scss';
 
 function About() {
   const greeting = "Hi, I'm Jessa.";
