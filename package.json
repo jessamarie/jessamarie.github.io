@@ -2,6 +2,12 @@
   "name": "jessamarie.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jessamarie.github.io",
+  "keywords": [
+    "portfolio",
+    "reactjs",
+    "react-router"
+  ],
   "dependencies": {
     "@styled-icons/boxicons-logos": "^10.23.0",
     "@styled-icons/fa-brands": "^10.26.0",
@@ -10,6 +16,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "gh-pages": "^3.2.0",
     "history": "^5.0.0",
     "node-sass": "^6.0.0",
     "react": "^17.0.1",
@@ -20,6 +27,8 @@
     "styled-icons": "^10.29.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
