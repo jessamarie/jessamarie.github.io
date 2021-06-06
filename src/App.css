@@ -12,15 +12,19 @@
   flex-direction: column;
 }
 
-/* container */
 header {
   padding-top: 15vh;
-  flex: 0;
+  flex: 0 0 auto;
 }
 
 .body-container {
   margin: 10vh;
-  flex: 1;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+footer {
+  flex: 0 0 auto;
 }
 
 /* pages */
@@ -84,9 +88,23 @@ li {
   list-style: none;
 }
 
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f5e3e0 #1f0318;
+}
 
-/* @media screen and (min-width: 780px) {
-  .full-width-img {
-  margin: auto;
-  width: 90%;
-  } */
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1f0318;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f5e3e0;
+  border-radius: 20px;
+  border: 3px solid #1f0318;
+}

@@ -1,8 +1,4 @@
-footer {
-  flex: 0;
-}
-
-ul {
+.Footer ul {
   display: flex;
   align-content: flex-end;
   align-items: flex-end;

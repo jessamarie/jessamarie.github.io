@@ -1,6 +1,6 @@
 import { DevTo } from 'styled-icons/boxicons-logos';
 import { FilePdf } from 'styled-icons/boxicons-solid';
-import { TwitterWithCircle, Linkedin, Github } from 'styled-icons/entypo-social';
+import { Linkedin, Github } from 'styled-icons/entypo-social';
 
 import { Hashnode } from 'styled-icons/simple-icons';
 
@@ -22,12 +22,6 @@ const Links = [
     url: 'https://docs.google.com/document/d/1vYktTZyz8bN_rlO52Wiklb_ktUTCECoCdm6XBASwRUQ/preview',
     label: 'Resume',
     icon: FilePdf
-  },
-  {
-    id: 4,
-    url: 'https://twitter.com/JessaMarieDev',
-    label: 'Twitter',
-    icon: TwitterWithCircle
   },
   {
     id: 5,

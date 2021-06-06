@@ -1,6 +1,34 @@
-import { Css3, Html5, Javascript, ReactLogo } from 'styled-icons/boxicons-logos';
+import { Javascript, ReactLogo } from 'styled-icons/boxicons-logos';
 
 import { Rubygems, Rubyonrails, Webpack } from 'styled-icons/simple-icons';
+
+import recallPhoto from './recall.jpg';
+import sitePhoto from './jessamarie.png';
+import hangmanPhoto from './hangman.png';
+import mlunchPhoto from './mystery-lunch.png';
+
+const LOGOS = {
+  javascript: {
+    label: 'javascript',
+    icon: Javascript
+  },
+  react: {
+    label: 'react',
+    icon: ReactLogo
+  },
+  ruby: {
+    label: 'ruby',
+    icon: Rubygems
+  },
+  rails: {
+    label: 'rails',
+    icon: Rubyonrails
+  },
+  webpack: {
+    label: 'webpack',
+    icon: Webpack
+  }
+};
 
 const Projects = [
   {
@@ -8,28 +36,32 @@ const Projects = [
     name: 'Recall',
     repo: 'http://github.com/jessamarie/recall',
     description: 'An application to help study keywords.',
-    technologies: [ReactLogo, Css3, Html5, Webpack]
+    technologies: [LOGOS.react, LOGOS.webpack],
+    imgName: recallPhoto
   },
   {
     id: 2,
     name: 'jessamarie.github.io',
     repo: 'http://github.com/jessamarie/jessamarie.github.io',
     description: 'My Githhub Portfolio',
-    technologies: [ReactLogo, Webpack, Html5, Css3]
+    technologies: [LOGOS.react, LOGOS.webpack],
+    imgName: sitePhoto
   },
   {
     id: 3,
     name: 'Reverse Hangman',
     repo: 'http://github.com/jessamarie/hangman/',
     description: 'A unique hangman game--in reverse!',
-    technologies: [Javascript, Html5, Css3]
+    technologies: [LOGOS.javascript],
+    imgName: hangmanPhoto
   },
   {
     id: 4,
     name: 'Mystery Lunch',
     repo: 'http://github.com/jessamarie/mystery-lunch/',
     description: 'An application where you can order a random meal from a restaurant.',
-    technologies: [Rubygems, Rubyonrails, Html5, Css3]
+    technologies: [LOGOS.ruby, LOGOS.rails],
+    imgName: mlunchPhoto
   }
 ];
 

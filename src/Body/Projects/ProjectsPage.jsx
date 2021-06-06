@@ -1,18 +1,26 @@
 import React from 'react';
 import Projects from './Projects';
-// import './Projects.css';
+import './Projects.css';
 
 function ProjectsPage() {
+  function getTagNames(projectName, technologies) {
+    return technologies.map(tech => {
+      const TagName = tech.icon;
+      return <TagName key={projectName * tech.label} size="25" title={tech.label} />;
+    });
+  }
+
   function ListItems() {
     if (Projects.length > 0) {
       return Projects.map(project => {
-        // const TagName = project.icon;
+        const TagNames = getTagNames(project.name, project.technologies);
         return (
           <li key={project.id}>
             <a href={project.repo} target="_blank" rel="noopener noreferrer">
-              {project.name}
+              <img src={project.imgName} width="300" height="150" alt={project.imgName} />
+              <span>{project.name}</span>
+              <span>{TagNames}</span>
             </a>
-            {/* <TagName size="25" title={project.technologies} /> */}
           </li>
         );
       });

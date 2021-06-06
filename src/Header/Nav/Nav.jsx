@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Nav() {
   return (
-    <nav style={{ margin: 10 }}>
+    <nav>
       <Link to="/" style={{ padding: 5 }}>
         About me
       </Link>
