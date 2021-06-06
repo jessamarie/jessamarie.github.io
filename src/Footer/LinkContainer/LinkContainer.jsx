@@ -1,6 +1,6 @@
 import React from 'react';
 import Links from './Links';
-import './Links.css';
+import './Links.scss';
 
 function LinkContainer() {
   function ListItems() {
@@ -10,7 +10,7 @@ function LinkContainer() {
         return (
           <li key={link.id}>
             <a href={link.url} target="_blank" rel="noopener noreferrer">
-              <TagName size="48" title={link.label} />
+              <TagName size="25" title={link.label} />
             </a>
           </li>
         );
