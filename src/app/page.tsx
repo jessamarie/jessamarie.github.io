@@ -1,95 +1,33 @@
-import Image from 'next/image';
-import styles from './page.module.css';
-import { Button } from '@chakra-ui/react';
-
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <Button colorScheme='blue'>Button</Button>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href='https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            By{' '}
-            <Image
-              src='/vercel.svg'
-              alt='Vercel Logo'
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src='/next.svg'
-          alt='Next.js Logo'
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
+    <main>
+      <h1>Hi, I'm Jessa 👋</h1>
+      <p>
+        I'm a full stack developer. I create web applications with JavaScript,
+        TypeScript, React, Next.js, and more. I am passionate about solving
+        complex problems and writing beautiful code.
+      </p>
+      <div className='social-links'>
         <a
-          href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          className={styles.card}
+          className='social-link'
           target='_blank'
-          rel='noopener noreferrer'
+          href='https://docs.google.com/document/d/1vYktTZyz8bN_rlO52Wiklb_ktUTCECoCdm6XBASwRUQ/preview'
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+          Resume
         </a>
-
         <a
-          href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          className={styles.card}
+          className='social-link'
           target='_blank'
-          rel='noopener noreferrer'
+          href='https://www.linkedin.com/in/jessicamariebarre/'
         >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+          LinkedIn
         </a>
-
         <a
-          href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          className={styles.card}
+          className='social-link'
           target='_blank'
-          rel='noopener noreferrer'
+          href='https://github.com/jessamarie'
         >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          className={styles.card}
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          Github
         </a>
       </div>
     </main>
