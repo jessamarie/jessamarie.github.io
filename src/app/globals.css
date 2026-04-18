@@ -16,6 +16,10 @@ footer {
   margin-right: auto;
 }
 
+footer {
+  padding: 10px;
+}
+
 body {
   display: flex;
   flex-direction: column;

@@ -1,9 +1,9 @@
 export default function Home() {
   return (
     <main>
-      <h1>Hi, I'm Jessa 👋</h1>
+      <h1>Hi, I&apos;m Jessa 👋</h1>
       <p>
-        I'm a full stack developer. I create web applications with JavaScript,
+        I&apos;m a full stack developer. I create web applications with JavaScript,
         TypeScript, React, Next.js, and more. I am passionate about solving
         complex problems and writing beautiful code.
       </p>
@@ -11,6 +11,7 @@ export default function Home() {
         <a
           className='social-link'
           target='_blank'
+          rel='noreferrer'
           href='https://docs.google.com/document/d/1vYktTZyz8bN_rlO52Wiklb_ktUTCECoCdm6XBASwRUQ/preview'
         >
           Resume
@@ -18,6 +19,7 @@ export default function Home() {
         <a
           className='social-link'
           target='_blank'
+          rel='noreferrer'
           href='https://www.linkedin.com/in/jessicamariebarre/'
         >
           LinkedIn
@@ -25,6 +27,7 @@ export default function Home() {
         <a
           className='social-link'
           target='_blank'
+          rel='noreferrer'
           href='https://github.com/jessamarie'
         >
           Github

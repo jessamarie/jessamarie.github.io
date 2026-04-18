@@ -1,9 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
-import GithubCard from '../components/github-card';
+import GithubCard, { GithubRepo } from '../components/github-card';
 
 export default function Projects() {
-  const [projects, setProjects] = useState<any>([]);
+  const [projects, setProjects] = useState<GithubRepo[]>([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -12,8 +12,6 @@ export default function Projects() {
       );
 
       const projects = await data.json();
-
-      // projects.total_count
 
       setProjects(projects.items);
     };
@@ -27,8 +25,8 @@ export default function Projects() {
       <p>A portfolio of my Github projects</p>
       <div className='projects-container'>
         {projects.length
-          ? projects.map((latestRepo: any, idx: number) => (
-              <GithubCard latestRepo={latestRepo} key={idx} />
+          ? projects.map((latestRepo: GithubRepo) => (
+              <GithubCard latestRepo={latestRepo} key={latestRepo.name} />
             ))
           : 'No repositories to show'}
       </div>

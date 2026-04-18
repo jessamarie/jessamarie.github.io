@@ -23,10 +23,10 @@ export default function RootLayout({
           <Navbar />
           {children}
         </Providers>
+        <footer>
+          Made with &hearts; with Next.js by Jessa @{new Date().getFullYear()}
+        </footer>
       </body>
-      <footer>
-        Made with &hearts; with Next.js by Jessa @{new Date().getFullYear()}
-      </footer>
     </html>
   );
 }
