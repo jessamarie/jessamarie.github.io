@@ -1,39 +1,40 @@
-'use client';
-import { useEffect, useState } from 'react';
-import GithubCard, { GithubRepo } from '../components/github-card';
+import ProjectCard from '../components/project-card';
+import RepoCard from '../components/repo-card';
+import { projects } from './data';
+import { filterRepos, type GithubRepo } from './filter';
+import type { Repo } from '../components/repo-card';
 
-export default function Projects() {
-  const [projects, setProjects] = useState<GithubRepo[]>([]);
-  const [loading, setLoading] = useState(true);
+async function getRepos(): Promise<Repo[]> {
+  try {
+    const res = await fetch(
+      'https://api.github.com/users/jessamarie/repos?per_page=100&sort=pushed',
+      { headers: { Accept: 'application/vnd.github+json' } }
+    );
+    if (!res.ok) return [];
+    const data: GithubRepo[] = await res.json();
+    return filterRepos(data, projects.map((p) => p.name));
+  } catch {
+    return [];
+  }
+}
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const data = await fetch(
-        `https://api.github.com/search/repositories?q=user:jessamarie+sort:author-date-asc`
-      );
-      const json = await data.json();
-      setProjects(json.items);
-      setLoading(false);
-    };
-
-    fetchProjects();
-  }, []);
+export default async function Projects() {
+  const repos = await getRepos();
 
   return (
-    <div>
-      <h1>Projects</h1>
-      <p>A portfolio of my Github projects</p>
+    <main>
+      <section className='section'>
+        <h1>Projects</h1>
+        <p className='lead'>A selection of things I&apos;ve built.</p>
+      </section>
       <div className='projects-container'>
-        {loading ? (
-          <p className='loading'>Loading projects...</p>
-        ) : projects.length ? (
-          projects.map((latestRepo) => (
-            <GithubCard latestRepo={latestRepo} key={latestRepo.name} />
-          ))
-        ) : (
-          'No repositories to show'
-        )}
+        {projects.map((project) => (
+          <ProjectCard project={project} key={project.id} />
+        ))}
+        {repos.map((repo) => (
+          <RepoCard repo={repo} key={repo.id} />
+        ))}
       </div>
-    </div>
+    </main>
   );
 }
