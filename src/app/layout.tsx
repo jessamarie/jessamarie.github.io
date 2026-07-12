@@ -29,7 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={dmSans.variable} suppressHydrationWarning>
-      <body>
+      {/* suppressHydrationWarning: browser extensions (e.g. Grammarly) add
+          attributes to <body> before hydration; those are not real mismatches. */}
+      <body suppressHydrationWarning>
         <Providers>
           <Navbar />
           {children}
