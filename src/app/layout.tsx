@@ -1,4 +1,3 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import { Providers } from './providers';
@@ -6,9 +5,6 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans', weight: ['300', '400', '500'] });
-
-// Runs before paint so the saved / system theme is applied with no flash.
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
 
 export const metadata: Metadata = {
   title: "Jessica Marie's portfolio",
@@ -34,12 +30,11 @@ export default function RootLayout({
   return (
     <html lang='en' className={dmSans.variable} suppressHydrationWarning>
       <body>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <Providers>
           <Navbar />
           {children}
+          <Footer />
         </Providers>
-        <Footer />
       </body>
     </html>
   );
